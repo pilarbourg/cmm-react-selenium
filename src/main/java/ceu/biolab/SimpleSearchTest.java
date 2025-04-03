@@ -11,19 +11,22 @@ import org.openqa.selenium.JavascriptExecutor;
 import java.util.*;
 
 public class SimpleSearchTest {
-  private WebDriver driver;º  º
+  private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
+
   @Before
   public void setUp() {
     driver = new FirefoxDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
+
   @After
   public void tearDown() {
     driver.quit();
   }
+
   @Test
   public void simplesearch() {
     driver.get("https://localhost:5178/simple-search");
